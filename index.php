@@ -19,6 +19,7 @@
 
 	<link rel="stylesheet" href="css/navbar.css" type="text/css">
 	<link rel="stylesheet" href="css/homebanner.css" type="text/css">
+	<link rel="stylesheet" href="css/aboutus.css" type="text/css">
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -35,13 +36,22 @@
 		</nav>
 	<!-- HOME BANNER (TITLE, ETC) -->
 	<div id="home-banner">
-		<div class="content">
+		<div class="banner-content">
 			<h1>WELCOME TO [TITLE OF WEBSITE]</h1>
 			<h4>Here you can find information about your favorite movies, and provide ratings for each one!</h4>
 		</div>
 	</div>
 	<!-- INFO ABOUT US -->
-	<div id="about-us"></div>
+	<div id="about-us">
+		<div class="content-1">
+			<h4>Content 1</h4>
+			<p>content goes here........</p>
+		</div>
+		<div class="content-2">
+			<h4>Content 2</h4>
+			<p>content goes here........</p>
+		</div>
+	</div>
 	<!-- WHAT THE WEBSITE IS FOR -->
 	<!-- HOW TO USE -->
 	<!-- FOOTER -->
