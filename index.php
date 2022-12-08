@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="css/navbar.css" type="text/css">
 	<link rel="stylesheet" href="css/homebanner.css" type="text/css">
 	<link rel="stylesheet" href="css/aboutus.css" type="text/css">
+	<link rel="stylesheet" href="css/howto.css" type="text/css">
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -43,17 +44,27 @@
 	</div>
 	<!-- INFO ABOUT US -->
 	<div id="about-us">
-		<div class="content-1">
+		<div class="about-content-1">
 			<h4>Content 1</h4>
 			<p>content goes here........</p>
 		</div>
-		<div class="content-2">
+		<div class="about-content-2">
 			<h4>Content 2</h4>
 			<p>content goes here........</p>
 		</div>
 	</div>
 	<!-- WHAT THE WEBSITE IS FOR -->
-	<!-- HOW TO USE -->
+	<div id="how-to">
+		<div class="how-content-1">
+			<h4>Content 1</h4>
+			<p>content goes here........</p>
+		</div>
+		<div class="how-content-2">
+			<h4>Content 2</h4>
+			<p>content goes here........</p>
+		</div>
+	</div>
 	<!-- FOOTER -->
+	
 </body>
 </html>
