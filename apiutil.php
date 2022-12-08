@@ -5,6 +5,7 @@
 
 	// echo getReq("https://www.omdbapi.com/?apikey=db60c827&t=Fury");
 	// echo $request->Title;
+	// https://image.tmdb.org/t/p/w300/g4yJTzMtOBUTAR2Qnmj8TYIcFVq.jpg
 
 	// GET REQUEST API
 	function getReq($url)
