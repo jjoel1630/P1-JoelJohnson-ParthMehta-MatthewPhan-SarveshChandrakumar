@@ -73,12 +73,53 @@
 		$sql_query = "SELECT * FROM movies";
 		$res = $connec->query($sql_query);
 
+		$movies_array[] = (object) array();
+
 		if ($res->num_rows > 0) {
+			$i = 0;
 			while($row = $res->fetch_assoc()) {
-				echo "id: " . $row["movie_id"]. " - title: " . $row["title"] . " - genre: " . $row["genre"]. "<br />";
+				// echo "id: " . $row["movie_id"]. " - title: " . $row["title"] . " - genre: " . $row["genre"]. "<br />";
+				$movie_object = new stdClass();
+			
+				$movie_object->id = $row["movie_id"];
+				$movie_object->title = $row["title"];
+				$movie_object->genre = $row["genre"];
+				$movie_object->description = $row["description"];
+				$movie_object->rel_date = $row["release_date"];
+				$movie_object->budget = $row["budget"];
+
+				$movies_array[$i] = $movie_object;
+
+				$i++;
 			}
-		} else echo "0 results";
+			return $movies_array;
+		} else return 0;
 
 		$connec->close();
 	}
-?>
+
+	function formatMoviesTable() {
+		$movies_array[] = (object) array();		
+		// $res = getData();
+		
+		$i = 0;
+		while($i < count($res)) {
+			// $movie_object = new stdClass();
+			
+			// $movie_object->id = $row["movie_id"];
+			// $movie_object->title = $row["title"];
+			// $movie_object->genre = $row["genre"];
+			// $movie_object->description = $row["description"];
+			// $movie_object->rel_date = $row["release_date"];
+			// $movie_object->budget = $row["budget"];
+
+			echo $row["movie_id"];
+
+			// $movies_array[$i] = $movie_object;
+
+			$i++;
+		}
+
+		return $movies_array;
+	}
+	?>
