@@ -18,13 +18,14 @@
 	<title>Document</title>
 
 	<link rel="stylesheet" href="css/navbar.css" type="text/css">
+	<link rel="stylesheet" href="css/homebanner.css" type="text/css">
 </head>
 <body>
 	<!-- NAVBAR -->
 		<!-- LIST OF MOVIES, HOME, SEARCH (later) -->
 		<nav>
 			<div>
-				<h3>TITLE OF WEBSITE</h3>
+				<h3>[TITLE OF WEBSITE]</h3>
 			</div>
 			<ul>
 				<li>List</li>
@@ -33,7 +34,14 @@
 			</ul>
 		</nav>
 	<!-- HOME BANNER (TITLE, ETC) -->
+	<div id="home-banner">
+		<div class="content">
+			<h1>WELCOME TO [TITLE OF WEBSITE]</h1>
+			<h4>Here you can find information about your favorite movies, and provide ratings for each one!</h4>
+		</div>
+	</div>
 	<!-- INFO ABOUT US -->
+	<div id="about-us"></div>
 	<!-- WHAT THE WEBSITE IS FOR -->
 	<!-- HOW TO USE -->
 	<!-- FOOTER -->
