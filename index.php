@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/homebanner.css" type="text/css">
 	<link rel="stylesheet" href="css/aboutus.css" type="text/css">
 	<link rel="stylesheet" href="css/howto.css" type="text/css">
+	<link rel="stylesheet" href="css/footer.css" type="text/css">
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -65,6 +66,8 @@
 		</div>
 	</div>
 	<!-- FOOTER -->
-	
+	<footer>
+		<h4>This project was made by ... for Mr. Millard's AP CSP class</h4>
+	</footer>
 </body>
 </html>
