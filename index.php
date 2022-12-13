@@ -11,20 +11,36 @@
 	<link rel="stylesheet" href="css/aboutus.css" type="text/css">
 	<link rel="stylesheet" href="css/howto.css" type="text/css">
 	<link rel="stylesheet" href="css/footer.css" type="text/css">
+
+	<script defer>
+		const navLi = document.querySelectorAll("nav>ul>li");
+
+		navLi.foreach((val, idx) => {
+			if(idx == 0) {
+				val.addEventListener("onclick", (e) => {
+					window.location = "/movies-list.php";
+				})
+			} else if (idx == 1) {
+				val.addEventListener("onclick", (e) => {
+					window.location = "/reviews.php";
+				})
+			}
+		})
+		</script>
 </head>
 <body>
 	<!-- NAVBAR -->
 		<!-- LIST OF MOVIES, HOME, SEARCH (later) -->
-		<nav>
-			<div>
-				<h3>[TITLE OF WEBSITE]</h3>
-			</div>
-			<ul>
-				<li>List</li>
-				<li>Movies</li>
-				<li>Reviews</li>
-			</ul>
-		</nav>
+	<nav>
+		<div>
+			<h3>[TITLE OF WEBSITE]</h3>
+		</div>
+		<ul>
+			<li>Movies</li>
+			<li>Reviews</li>
+			<li>Search</li>
+		</ul>
+	</nav>
 	<!-- HOME BANNER (TITLE, ETC) -->
 	<div id="home-banner">
 		<div class="banner-content">

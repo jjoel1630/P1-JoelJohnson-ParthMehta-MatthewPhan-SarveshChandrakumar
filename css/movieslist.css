@@ -1,0 +1,20 @@
+.movie-list-container {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.movie-card {
+	width: auto;
+	height: auto;
+	background-color: red;
+
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 300px);
+
+	margin: 0.3em;
+}
+
+.movie-card:hover {
+	cursor: pointer;
+}

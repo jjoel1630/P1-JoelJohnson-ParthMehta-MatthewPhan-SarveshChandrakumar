@@ -1,6 +1,4 @@
 <?php
-	require 'vendor/autoload.php';
-
 	function connectMoviesDB() {
 		// var_dump($_ENV);
 

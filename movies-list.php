@@ -19,15 +19,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 
-	<?php 
-		$i = 0;
-		while($i < count($m_array)) {
-			echo "<div><h2>{$m_array[$i]->title}</h2><h3>{$m_array[$i]->id}</h3><p>{$m_array[$i]->genre}</p><p>{$m_array[$i]->description}</p><p>{$m_array[$i]->rel_date}</p><p>{$m_array[$i]->budget}</p></div>";
-			$i++;
-			echo "<br/>";
-		}
-	?>
+	<link rel="stylesheet" href="css/navbar.css" type="text/css">
+	<link rel="stylesheet" href="css/movieslist.css" type="text/css">
+
+	<script src="js/movies-list.js" defer></script>
 </head>
 <body>
+	<nav>
+		<div>
+			<h3>[TITLE OF WEBSITE]</h3>
+		</div>
+		<ul>
+			<li>List</li>
+			<li>Movies</li>
+			<li>Reviews</li>
+		</ul>
+	</nav>
+	<div class="movie-list-container">
+		<?php 
+			$i = 0;
+			while($i < count($m_array)) {
+				echo "<div class='movie-card'>";
+				echo "<h2>{$m_array[$i]->title}</h2>";
+				echo "<h3>{$m_array[$i]->id}</h3>";
+				echo "<p>{$m_array[$i]->genre}</p>";
+				echo "<p>{$m_array[$i]->description}</p>";
+				echo "<p>{$m_array[$i]->rel_date}</p>";
+				echo "<p>{$m_array[$i]->budget}</p></div>";
+				// echo "<br/>";
+
+				$i++;
+			}
+		?>
+	</div>
 </body>
 </html>
