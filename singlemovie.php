@@ -40,7 +40,7 @@
 		<ul>
 			<li>List</li>
 			<li>Movies</li>
-			<li>Reviews</li>
+			<li>Search</li>
 		</ul>
 	</nav>
 	<?php 

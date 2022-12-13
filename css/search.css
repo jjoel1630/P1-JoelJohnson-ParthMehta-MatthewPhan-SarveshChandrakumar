@@ -1,0 +1,22 @@
+.title {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin: 1em 0em;
+}
+
+.form-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.result-container {
+	width: 100%;
+	margin: 4em 0em;
+}
+
+.result-container > h1 {
+	text-align: center;
+}

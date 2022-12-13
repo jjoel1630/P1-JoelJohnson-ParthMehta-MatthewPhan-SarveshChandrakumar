@@ -32,9 +32,9 @@
 			<h3>[TITLE OF WEBSITE]</h3>
 		</div>
 		<ul>
-			<li>List</li>
 			<li>Movies</li>
 			<li>Reviews</li>
+			<li>Search</li>
 		</ul>
 	</nav>
 	<div class="movie-list-container">
