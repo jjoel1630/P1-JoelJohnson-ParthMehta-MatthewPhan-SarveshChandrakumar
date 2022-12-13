@@ -8,6 +8,7 @@
 	include 'dbutil.php';
 
 	$m_array = getData();
+	// transferToDB();
 
 	// getData();
 ?>
@@ -22,6 +23,7 @@
 	<link rel="stylesheet" href="css/navbar.css" type="text/css">
 	<link rel="stylesheet" href="css/movieslist.css" type="text/css">
 
+	<script src="js/navbar.js" defer></script>
 	<script src="js/movies-list.js" defer></script>
 </head>
 <body>
@@ -41,11 +43,11 @@
 			while($i < count($m_array)) {
 				echo "<div class='movie-card'>";
 				echo "<h2>{$m_array[$i]->title}</h2>";
-				echo "<h3>{$m_array[$i]->id}</h3>";
-				echo "<p>{$m_array[$i]->genre}</p>";
+				echo "<h3 style=\"display: none\">{$m_array[$i]->id}</h3>";
+				echo "<div><p><strong>Genre:</strong> {$m_array[$i]->genre}</p>";
 				echo "<p>{$m_array[$i]->description}</p>";
-				echo "<p>{$m_array[$i]->rel_date}</p>";
-				echo "<p>{$m_array[$i]->budget}</p></div>";
+				echo "<p><strong>Release date:</strong> {$m_array[$i]->rel_date}</p>";
+				echo "<p><strong>Budget:</strong> {$m_array[$i]->budget}</p></div></div>";
 				// echo "<br/>";
 
 				$i++;

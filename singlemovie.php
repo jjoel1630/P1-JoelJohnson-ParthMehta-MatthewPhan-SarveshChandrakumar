@@ -7,6 +7,7 @@
 	<title>Document</title>
 
 	<script src="js/displaymovie.js" defer></script>
+	<script src="js/navbar.js" defer></script>
 	<!-- <script defer>
 		if(parseInt(window.location.search.split("=")[1]) == NaN) {
 			var countDownDate = new Date().getTime() + 5000;
@@ -92,15 +93,17 @@
 
 		<div class="reviews-list">
 			<?php 
-				$f = 0;
-				while($f < count($review_data_array)) {
-					echo "<div class='singe-review-card'>";
-					echo "<h2>" . $review_data_array[$f]->rating . "</h2>";
-					echo "<h3>" . $review_data_array[$f]->description . "</h3>";
-					echo "<h4>" . $review_data_array[$f]->rater_name . "</h4>";
-					echo "</div>";
-
-					$f++;
+				if($review_data_array != 0) {
+					$f = 0;
+					while($f < count($review_data_array)) {
+						echo "<div class='singe-review-card'>";
+						echo "<h2>" . $review_data_array[$f]->rating . "</h2>";
+						echo "<h3>" . $review_data_array[$f]->description . "</h3>";
+						echo "<h4>" . $review_data_array[$f]->rater_name . "</h4>";
+						echo "</div>";
+	
+						$f++;
+					}
 				}
 			?>
 		</div>

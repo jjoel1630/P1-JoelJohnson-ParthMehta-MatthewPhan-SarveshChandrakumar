@@ -14,14 +14,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-
+	
 	<style>
 		.card-container {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-
+		
 		.card {
 			width: 300px;
 			margin: 10px;
@@ -33,8 +33,22 @@
 		}
 	</style>
 
+	<link rel="stylesheet" href="css/navbar.css" type="text/css">
+
+	<script src="js/navbar.js" defer></script>
 </head>
 <body>
+	<nav>
+		<div>
+			<h3>[TITLE OF WEBSITE]</h3>
+		</div>
+		<ul>
+			<li>Movies</li>
+			<li>Reviews</li>
+			<li>Search</li>
+		</ul>
+	</nav>
+
 	<h1>Search for movie</h1>
 	<form action="search.php" method="GET">
 		<select name="columns">

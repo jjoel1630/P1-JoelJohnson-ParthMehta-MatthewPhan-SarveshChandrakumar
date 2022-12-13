@@ -12,7 +12,8 @@
 	<link rel="stylesheet" href="css/howto.css" type="text/css">
 	<link rel="stylesheet" href="css/footer.css" type="text/css">
 
-	<script defer>
+	<script src="js/navbar.js" defer></script>
+	<!-- <script defer>
 		const navLi = document.querySelectorAll("nav>ul>li");
 
 		navLi.foreach((val, idx) => {
@@ -26,7 +27,7 @@
 				})
 			}
 		})
-		</script>
+	</script> -->
 </head>
 <body>
 	<!-- NAVBAR -->
