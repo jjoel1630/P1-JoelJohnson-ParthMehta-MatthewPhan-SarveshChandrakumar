@@ -19,11 +19,19 @@
 		while($z < $PAGE_COUNT) {
 			$f = getReq("https://api.themoviedb.org/3/discover/movie?api_key=" . $_ENV["THE_MOVIEDB_KEY"] . "&sort_by=popularity.desc&page=" . $z);
 			$f = json_decode($f);
+			https://image.tmdb.org/t/p/w500/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg
 	
 			$i = 0;
 			while($i < count($f->results)) {
 				$api_request = getReq("https://api.themoviedb.org/3/movie/" . $f->results[$i]->id . "?api_key=" . $_ENV["THE_MOVIEDB_KEY"]);
 				$api_request = json_decode($api_request);
+
+				$image = $api_request->poster_path;
+				// https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg
+				$image = $image ? $image : ($api_request->backdrop_path ? $api_request->backdrop_path : 'null');
+				if($image != 'null') {
+					$image = 'https://image.tmdb.org/t/p/w500' . $image;
+				}
 	
 				$budget = $api_request->budget;
 				$budget = mysqli_real_escape_string($connec, $budget);
@@ -53,9 +61,11 @@
 				$title = mysqli_real_escape_string($connec, $title);
 				$title = str_replace('“', '\“', $title);
 				$title = str_replace('”', '\”', $title);
-				$title = $title ? $title : 'null';				
+				$title = $title ? $title : 'null';		
+				
+				// echo $image;
 	
-				$single_query = "INSERT INTO movies (title, genre, description, release_date, budget) VALUES ('{$title}', '{$genre}', '{$desc}', '{$release_date}', '{$budget}')";
+				$single_query = "INSERT INTO movies (title, genre, description, release_date, budget, image) VALUES ('{$title}', '{$genre}', '{$desc}', '{$release_date}', '{$budget}', '{$image}')";
 				// $re = $connec->query($single_query);
 	
 				if ($connec->query($single_query) === TRUE) {

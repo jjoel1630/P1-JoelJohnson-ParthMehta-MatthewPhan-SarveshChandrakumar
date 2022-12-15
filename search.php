@@ -128,7 +128,7 @@
 					}
 					echo "</div>";
 				} else {
-					echo "<h2>No movies with the ". $_GET["columns"] . " of " . $_GET["query"] . "</h2>";
+					echo "<h1>No movies with the ". $_GET["columns"] . " of \"" . $_GET["query"] . "\"</h1>";
 				}
 			}
 		?>
