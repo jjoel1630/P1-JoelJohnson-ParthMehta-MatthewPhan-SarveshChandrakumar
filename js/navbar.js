@@ -5,17 +5,17 @@ const searchButton = document.querySelectorAll("nav > ul > li")[2];
 const titleButton = document.querySelector("nav > div");
 
 moviesList.addEventListener("click", (e) => {
-	window.location = "/movies-list.php";
+	window.location = "./movies-list.php";
 });
 
 reviewsList.addEventListener("click", (e) => {
-	window.location = "/";
+	window.location = "./";
 });
 
 searchButton.addEventListener("click", (e) => {
-	window.location = "/search.php";
+	window.location = "./search.php";
 });
 
 titleButton.addEventListener("click", (e) => {
-	window.location = "/";
+	window.location = "./";
 });
