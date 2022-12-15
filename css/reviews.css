@@ -1,0 +1,33 @@
+.reviews-list {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.reviews-list > div {
+	width: 40%;
+	padding-top: 1em;
+}
+
+.single-review-card {
+	width: 100%;
+	background-color: rgb(220, 220, 220);
+	margin-bottom: 1.5em;
+	border-radius: 0.4em;
+	box-shadow: 3px 3px 8px rgb(121, 121, 121);
+	padding: 1em;
+}
+
+.single-review-card:last-child {
+	margin-bottom: 1em;
+}
+
+.single-review-card > * {
+	margin-bottom: 0.5em;
+}
+
+.single-review-card > *:last-child {
+	margin-bottom: 0em;
+}

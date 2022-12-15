@@ -20,14 +20,14 @@
 
 .movie-card > h2 {
 	width: 100%;
-	height: 20%;
+	height: 10%;
 	text-align: center;
 }
 
 .movie-card > div {
 	width: 100%;
-	height: 80%;
-	margin-bottom: 1em;
+	height: 75%;
+	margin-top: 1em;
 }
 
 .movie-card > div > * {
@@ -37,4 +37,14 @@
 .movie-card:hover {
 	cursor: pointer;
 	background-color: rgb(239, 239, 239);
+}
+
+.image-container {
+	height: 0px;
+	width: 100%;
+}
+
+.image-container > img {
+	max-width: 100%;
+	max-height: 100%;
 }
