@@ -40,17 +40,15 @@
 	<script src="js/navbar.js" defer></script>
 </head>
 <body>
-	<nav>
+<nav>
 		<div>
-			<h3>[TITLE OF WEBSITE]</h3>
+			<h3>MovieShare</h3>
 		</div>
 		<ul>
 			<li>Movies</li>
-			<li>Reviews</li>
 			<li>Search</li>
 		</ul>
 	</nav>
-
 	<h1 class="title">Search for movie</h1>
 	<div class="form-container">
 		<form action="search.php" method="GET">
@@ -59,7 +57,6 @@
 				<option value="movie_id">Movie Id</option>
 				<option value="description">Description</option>
 				<option value="genre">Genre</option>
-				<option value="rel_date">Release Date</option>
 				<option value="budget">Budget</option>
 			</select>
 			<input type="text" name="query" placeholder="Query">

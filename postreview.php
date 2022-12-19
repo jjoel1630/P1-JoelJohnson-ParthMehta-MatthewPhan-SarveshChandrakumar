@@ -26,7 +26,7 @@
 	$dotenv->load();
 	include 'dbutil.php';
 
-	// insertRating(intval($movie_id), intval($_POST["rating"]), $_POST["comments"], $_POST["name"]);
+	insertRating(intval($movie_id), intval($_POST["rating"]), $_POST["comments"], $_POST["name"]);
 ?>
 
 <!-- <button>redirect</button> -->

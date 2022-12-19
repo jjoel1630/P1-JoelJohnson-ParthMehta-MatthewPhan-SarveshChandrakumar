@@ -53,15 +53,12 @@
 	</style>
 </head>
 <body>
-	<div id="timer"></div>
-
 	<nav>
 		<div>
-			<h3>[TITLE OF WEBSITE]</h3>
+			<h3>MovieShare</h3>
 		</div>
 		<ul>
 			<li>Movies</li>
-			<li>Reviews</li>
 			<li>Search</li>
 		</ul>
 	</nav>
@@ -127,10 +124,16 @@
 	</div>
 
 	<div style="margin-top: 4em">
-		<h2 style="text-align: center">Reviews for "<?php echo $data_array[0]->title; ?>"</h2>
+		<?php
+			if($review_data_array == 0) {
+				echo "<h2 style='text-align: center'>No reviews for \"{$data_array[0]->title}\"</h2>";
+			} else {
+				echo "<h2 style='text-align: center'>Reviews for \"{$data_array[0]->title}\"</h2>";
+			}
+		?>	
 		<div class="reviews-list">
 			<div>
-				<?php 
+				<?php
 					if($review_data_array != 0) {
 						$f = 0;
 						while($f < count($review_data_array)) {

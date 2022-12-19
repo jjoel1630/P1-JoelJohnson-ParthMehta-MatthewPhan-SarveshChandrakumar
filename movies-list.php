@@ -27,13 +27,12 @@
 	<script src="js/movies-list.js" defer></script>
 </head>
 <body>
-	<nav>
+<nav>
 		<div>
-			<h3>[TITLE OF WEBSITE]</h3>
+			<h3>MovieShare</h3>
 		</div>
 		<ul>
 			<li>Movies</li>
-			<li>Reviews</li>
 			<li>Search</li>
 		</ul>
 	</nav>

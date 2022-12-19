@@ -6,11 +6,70 @@
 
 	include 'dbconnection.php';
 
+	function createDB() {
+		$connec = connectCreateMoviesDB();
+
+		$query = "CREATE DATABASE csp_project_database";
+
+		if ($connec->query($query) === TRUE) {
+			echo "1/4 Database created successfully<br>";
+		} else {
+			echo "1/4 Error creating database: " . $connec->error;
+		}
+
+		// $query_user = "CREATE USER \"{$_ENV['SQL_USER_NAME']}\"@'localhost' IDENTIFIED BY \"{$_ENV['SQL_USER_PASSWORD']}\"";
+		// if ($connec->query($query_user) === TRUE) {
+		// 	echo "2/7 Database user created successfully";
+		// } else {
+		// 	echo "2/7 Error creating user: " . $connec->error;
+		// }
+
+		// $query_user_perms = "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE, CREATE ROLE, DROP ROLE ON *.* TO \"{$_ENV['SQL_USER_NAME']}\"@'localhost'";
+		// if ($connec->query($query_user_perms) === TRUE) {
+		// 	echo "3/7 Database user created successfully";
+		// } else {
+		// 	echo "3/7 Error granting user perms: " . $connec->error;
+		// }
+
+		// $query_flush_perms = "FLUSH PRIVILEGES";
+		// if ($connec->query($query_flush_perms) === TRUE) {
+		// 	echo "4/7 Database user created successfully";
+		// } else {
+		// 	echo "4/7 Error flushing perms: " . $connec->error;
+		// }
+
+		$connec->close();
+	}
+
+	function createTables() {
+		$connec = connectMoviesDB();
+
+		$query_movies = "CREATE TABLE movies (movie_id INT NOT NULL AUTO_INCREMENT, title VARCHAR(100), genre VARCHAR(20), description VARCHAR(1000),release_date VARCHAR(20),budget VARCHAR(500),image VARCHAR(200),PRIMARY KEY (movie_id))";
+			
+		if ($connec->query($query_movies) === TRUE) {
+			echo "2/4 Table movies created successfully<br>";
+		} else {
+			echo "2/4 Error creating table: " . $connec->error;
+		}
+
+		$query_ratings = "CREATE TABLE ratings (rating_id INT NOT NULL AUTO_INCREMENT,movie_id INT NOT NULL,rating INT,genre VARCHAR(30),description VARCHAR(200),rater_name VARCHAR(20),PRIMARY KEY (rating_id),FOREIGN KEY (rating_id) REFERENCES movies(movie_id))";
+			
+		if ($connec->query($query_ratings) === TRUE) {
+			echo "3/4 Table movies created successfully<br>";
+		} else {
+			echo "3/4 Error creating table: " . $connec->error;
+		}
+		
+		$connec->close();
+	}
+
 	function transferToDB() {
 		$connec = connectMoviesDB();
 
 		$sql_query = "SELECT * FROM movies";
 		$res = $connec->query($sql_query);
+
+		$success = true;
 
 		if ($res->num_rows != 0) return;
 
@@ -69,9 +128,10 @@
 				// $re = $connec->query($single_query);
 	
 				if ($connec->query($single_query) === TRUE) {
-					echo "New record created successfully<br>";
+					// echo "New record created successfully<br>";
 				} else {
-					echo "Error: " . $single_query . "<br>" . $connec->error;
+					// echo "Error: " . $single_query . "<br>" . $connec->error;
+					$success = false;
 				}
 	
 				$i++;
@@ -79,6 +139,13 @@
 
 			$z++;
 		}
+
+		if($success) {
+			echo "4/4 Movie data entered successfully<br>";
+		} else {
+			echo "4/4 Error entering movie data";
+		}
+
 		$connec->close();
 	}
 
@@ -228,7 +295,7 @@
 		// $res = $connec->query($sq);
 
 		if ($connec->query($sq) === TRUE) {
-			echo "New record created successfully";
+			// echo "New record created successfully";
 		} else {
 			echo "Error: " . $sq . "<br>" . $connec->error;
 		}
