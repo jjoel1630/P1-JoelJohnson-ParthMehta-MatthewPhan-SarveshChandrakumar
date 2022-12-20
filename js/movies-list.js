@@ -1,3 +1,4 @@
+// Created by Parth Mehta
 const cards = document.querySelectorAll(".movie-card");
 
 function truncate(str, n) {

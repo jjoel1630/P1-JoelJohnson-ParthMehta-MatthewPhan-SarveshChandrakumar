@@ -1,3 +1,4 @@
+<!-- Created by Joel Johnson -->
 <?php
 	function connectMoviesDB() {
 		// var_dump($_ENV);

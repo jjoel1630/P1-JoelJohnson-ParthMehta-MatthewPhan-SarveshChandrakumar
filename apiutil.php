@@ -1,3 +1,4 @@
+<!-- Created by Joel Johnson -->
 <?php 
 	// $request = getReq("https://www.omdbapi.com/?apikey=" . $_ENV["OMBD_API_KEY"] . "&t=Fury");
 	// $request = getReq("https://api.themoviedb.org/3/movie/436270?api_key=" . $_ENV["THE_MOVIEDB_KEY"]);

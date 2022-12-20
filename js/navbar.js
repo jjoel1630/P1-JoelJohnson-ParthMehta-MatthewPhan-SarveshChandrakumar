@@ -1,3 +1,5 @@
+// Created by Parth Mehta
+
 // console.log(parseInt(window.location.search.split("=")[1]));
 const moviesList = document.querySelectorAll("nav > ul > li")[0];
 // const reviewsList = document.querySelectorAll("nav > ul > li")[1];

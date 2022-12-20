@@ -1,3 +1,4 @@
+<!-- Created by Joel Johnson -->
 <?php
 	require 'vendor/autoload.php';
 
